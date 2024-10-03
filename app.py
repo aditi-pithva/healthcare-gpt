@@ -43,6 +43,7 @@ def healthcare_gpt():
         # Get the prompt (query) from the request body
         data = request.json
         prompt = data.get("prompt")
+        print(prompt)
         
         if not prompt:
             return jsonify({"error": "Prompt is required"}), 400
